@@ -1,0 +1,26 @@
+//Responsive
+@mixin responsive($size) {
+  @media screen and (min-width: $size) {
+    @content;
+  }
+}
+
+// Titles
+@mixin title__24 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+@mixin title__16 {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $color-brink-pink;
+}
+
+@mixin line($color) {
+  width: 100%;
+  height: 2px;
+  background-color: $color;
+}
