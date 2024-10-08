@@ -1,5 +1,12 @@
+@import 'base/reset';
+
 @import 'utils/variables';
-@import 'utils/reset';
 @import 'utils/mixins';
-@import 'utils/classes';
-@import 'view/main';
+
+@import 'base/fonts';
+@import 'base/base';
+
+@import 'layout/header';
+@import 'layout/footer';
+
+@import 'view/home/home';

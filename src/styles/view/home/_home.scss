@@ -1,0 +1,289 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+
+  &__overlay {
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .overlay {
+    @include padding;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: $color-white;
+
+    .line {
+      @include line($color-white);
+    }
+
+    &__title {
+      @include title($font-size-lg, $color-white, uppercase);
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      &__title {
+        @include title($font-size-lg, $color-white, none);
+      }
+
+      &__description {
+        @include description($font-size-md, $color-white);
+        line-height: 2.3rem;
+        text-align: left;
+      }
+    }
+  }
+}
+
+.hero__news {
+  @include padding;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    &__title {
+      @include title($font-size-lg, $color-brink-pink, uppercase);
+    }
+  }
+
+  .line {
+    @include line($color-black-haze);
+  }
+
+  .news__container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    .new {
+      &__title {
+        @include title($font-size-md, $color-brink-pink, uppercase);
+        margin-bottom: 2rem;
+      }
+
+      &__subheading {
+        @include title($font-size-md, $color-shark, none);
+        margin-bottom: 1rem;
+      }
+
+      &__description {
+        @include description($font-size-md, $color-gray-chateau);
+        font-family: $font-secondary;
+        line-height: 2.6rem;
+        margin-bottom: 1.2rem;
+      }
+
+      &__details {
+        &__description {
+          @include description($font-size-sm, $color-gray-chateau);
+          font-style: oblique;
+        }
+      }
+    }
+  }
+}
+
+// Trending
+.trending {
+  @include padding;
+  background-color: $color-porcelain;
+
+  &__title {
+    @include title($font-size-lg, black, uppercase);
+    margin-bottom: 4rem;
+  }
+
+  &__grid {
+    display: grid;
+    gap: 4rem;
+
+    @include responsive($mobile) {
+      grid-template-columns: 1fr;
+    }
+
+    @include responsive($tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include responsive($desktop) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__item {
+    img {
+      width: 100%;
+      max-height: 154px;
+      aspect-ratio: 1;
+    }
+
+    &__content {
+      padding: 2.5rem 3rem;
+      background-color: $color-white;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      @include responsive($tablet) {
+        padding: 4rem;
+      }
+
+      &__title {
+        @include title($font-size-md, $color-shark, none);
+      }
+
+      &__description {
+        @include description($font-size-sm, $color-gray-chateau);
+      }
+
+      &__destails {
+        p {
+          @include description($font-size-sm, $color-gray-chateau);
+          font-style: oblique
+        }
+      }
+    }
+  }
+}
+
+// Happening
+.happening-now {
+  @include padding;
+
+  &__title {
+    @include title($font-size-lg, $color-brink-pink, uppercase);
+    margin-bottom: 2rem;
+  }
+
+  &__grid {
+    display: grid;
+    gap: 2rem;
+
+    @include responsive($mobile) {
+      grid-template-columns: 1fr;
+    }
+
+    @include responsive($tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include responsive($desktop) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "large1 large1 small1"
+        "large2 large2 small2"
+        "large2 large2 small3";
+    }
+  }
+
+  &__item {
+    position: relative;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    &--large {
+      @include responsive($desktop) {
+        &:nth-child(1) {
+          grid-area: large1;
+        }
+        &:nth-child(2) {
+          grid-area: large2;
+        }
+      }
+    }
+
+    &--small {
+      @include responsive($desktop) {
+        &:nth-child(3) {
+          grid-area: small1;
+        }
+        &:nth-child(4) {
+          grid-area: small2;
+        }
+        &:nth-child(5) {
+          grid-area: small3;
+        }
+      }
+    }
+  }
+
+  &__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    color: $color-white;
+
+    .category {
+      @include description($font-size-sm, $color-brink-pink);
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    h3 {
+      @include title($font-size-md, $color-white, none);
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      @include description($font-size-sm, $color-white);
+    }
+  }
+}
+
+
+
+// Responsive
+@include responsive($tablet) {
+  .hero {
+    &__news {
+      &__container {
+        flex-direction: row;
+      }
+    }
+  }
+}
+
+@include responsive($desktop) {
+  .hero {
+    flex-direction: row;
+
+    &__overlay {
+      .overlay {
+        padding: 17.6rem 14rem;
+      }
+    }
+
+    &__news {
+      padding: 10rem;
+
+      .news {
+        flex-direction: column;
+      }
+    }
+  }
+}

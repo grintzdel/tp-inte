@@ -6,21 +6,38 @@
 }
 
 // Titles
-@mixin title__24 {
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  font-weight: bold;
+@mixin title($font-size, $color, $uppercase) {
+  font-size: $font-size;
+  color: $color;
+  text-transform: $uppercase;
+  font-weight: 700;
 }
 
-@mixin title__16 {
-  font-size: 1rem;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: $color-brink-pink;
+
+// Descriptions
+@mixin description($font-size, $color) {
+  font-size: $font-size;
+  color: $color;
 }
 
+
+// Line
 @mixin line($color) {
   width: 100%;
-  height: 2px;
+  height: 0.2rem;
   background-color: $color;
+}
+
+
+// Padding
+@mixin padding {
+  padding: 4rem 2.5rem;
+
+  @include responsive($tablet) {
+    padding: 4rem 8rem;
+  }
+
+  @include responsive($desktop) {
+    padding: 4rem 14rem;
+  }
 }

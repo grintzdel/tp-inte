@@ -19,55 +19,148 @@
     </nav>
 </header>
 
-<div class="hero__container">
-    <div class="hero__overlay__container">
+<section class="hero">
+    <div class="hero__overlay">
         <picture>
             <source srcset="dist/images/d-home.webp" type="image/webp" media="(min-width: 1440px)">
             <source srcset="dist/images/t-home.webp" type="image/webp" media="(min-width: 768px)">
             <img src="dist/images/m-home.webp" alt="Image">
         </picture>
-        <div class="hero__overlay">
-            <h1 class="hero__title"> Worlds news </h1>
+        <div class="overlay">
+            <h1 class="overlay__title"> Worlds news </h1>
             <div class="line"></div>
-            <div class="hero__overlay--content">
-                <h2>Amazing places in America to visit.</h2>
-                <p>For some reason — this country, this city, this neighborhood, this particular street — is the place
+            <div class="overlay__content">
+                <h2 class="overlay__content__title">Amazing places in America to visit.</h2>
+                <p class="overlay__content__description">For some reason — this country, this city, this neighborhood,
+                    this particular street — is the place
                     you
                     are living a majority of your life in.</p>
-                <a href="#" class="button--primary">Learn more</a>
+                <a href="#" class="button">Learn more</a>
             </div>
         </div>
     </div>
-    <div class="hero__news__container">
-        <div class="news__header">
-            <h2>More news</h2>
+
+    <div class="hero__news">
+        <div class="hero__news__header">
+            <h2 class="hero__news__header__title">More news</h2>
         </div>
         <div class="line"></div>
-        <div class="news__articles">
-            <div class="news__article">
-                <h3>Travel</h3>
-                <h4>Article title</h4>
-                <p>Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has appareat…</p>
-                <div class="news__details">
+        <div class="news__container">
+            <div class="new">
+                <h3 class="new__title">Travel</h3>
+                <h4 class="new__subheading">Article title</h4>
+                <p class="new__description">Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has
+                    appareat…</p>
+                <div class="new__details">
+                    <p class="new__details__description">2m ago</p>
+                </div>
+            </div>
+            <div class="new">
+                <h3 class="new__title">Technology</h3>
+                <h4 class="new__subheading">Article title</h4>
+                <p class="new__description">Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has
+                    appareat…</p>
+                <div class="new__details">
+                    <p class="new__details__description">1h ago</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="trending">
+    <h2 class="trending__title">Trending</h2>
+    <div class="trending__grid">
+        <article class="trending__item">
+            <picture>
+                <source srcset="dist/images/d-slide-2.webp" type="image/webp" media="(min-width: 1440px)">
+                <source srcset="dist/images/t-slide-2.webp" type="image/webp" media="(min-width: 768px)">
+                <img src="dist/images/m-slide-2.webp" alt="Image">
+            </picture>
+            <div class="trending__item__content">
+                <h3 class="trending__item__content__title">Nature inspire allure</h3>
+                <p class="trending__item__content__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="trending__item__content__details">
                     <p>2m ago</p>
                 </div>
             </div>
-            <div class="news__article">
-                <h3>Technology</h3>
-                <h4>Article title</h4>
-                <p>Lorem ipsum dolor sit amet, ipsum labitur lucilius mel id, ad has appareat…</p>
-                <div class="news__details">
-                    <p>1h ago</p>
+        </article>
+        <article class="trending__item">
+            <picture>
+                <source srcset="dist/images/d-slide-1.webp" type="image/webp" media="(min-width: 1440px)">
+                <source srcset="dist/images/t-slide-1.webp" type="image/webp" media="(min-width: 768px)">
+                <img src="dist/images/m-slide-1.webp" alt="Image">
+            </picture>
+            <div class="trending__item__content">
+                <h3 class="trending__item__content__title">Nature inspire allure</h3>
+                <p class="trending__item__content__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="trending__item__content__details">
+                    <p>2m ago</p>
                 </div>
             </div>
-        </div>
+        </article>
+        <article class="trending__item">
+            <picture>
+                <source srcset="dist/images/d-bridge.webp" type="image/webp" media="(min-width: 1440px)">
+                <source srcset="dist/images/t-bridge.webp" type="image/webp" media="(min-width: 768px)">
+                <img src="dist/images/m-bridge.webp" alt="Image">
+            </picture>
+            <div class="trending__item__content">
+                <h3 class="trending__item__content__title">Nature inspire allure</h3>
+                <p class="trending__item__content__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <div class="trending__item__content__details">
+                    <p>2m ago</p>
+                </div>
+            </div>
+        </article>
     </div>
-</div>
+</section>
 
-<div class="blogs__container">
-    <div class="blog__trending__container"></div>
-    <div class="blog__happening__container"></div>
-</div>
+<section class="happening-now">
+    <h2 class="happening-now__title">Happening Now</h2>
+    <div class="happening-now__grid">
+        <article class="happening-now__item happening-now__item--large">
+            <picture>
+                <source srcset="dist/images/d-chemin.webp" type="image/webp" media="(min-width: 1440px)">
+                <source srcset="dist/images/t-chemin.webp" type="image/webp" media="(min-width: 768px)">
+                <img src="dist/images/m-chemin.webp" alt="Image">
+            </picture>
+            <div class="happening-now__content">
+                <h3>Large article title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.</p>
+            </div>
+        </article>
+        <article class="happening-now__item happening-now__item--large">
+            <picture>
+                <source srcset="dist/images/d-elephant.webp" type="image/webp" media="(min-width: 1440px)">
+                <source srcset="dist/images/t-elephant.webp" type="image/webp" media="(min-width: 768px)">
+                <img src="dist/images/m-elephant.webp" alt="Image">
+            </picture>
+            <div class="happening-now__content">
+                <span class="category">Travel</span>
+                <h3>Large article title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.</p>
+            </div>
+        </article>
+        <article class="happening-now__item happening-now__item--small">
+            <picture>
+                <source srcset="dist/images/d-bird.webp" type="image/webp" media="(min-width: 1440px)">
+                <source srcset="dist/images/t-bird.webp" type="image/webp" media="(min-width: 768px)">
+                <img src="dist/images/m-bird.webp" alt="Image">
+            </picture>
+            <h3>Small title</h3>
+        </article>
+        <article class="happening-now__item happening-now__item--small">
+            <picture>
+                <source srcset="dist/images/d-route.webp" type="image/webp" media="(min-width: 1440px)">
+                <img src="dist/images/m-route.webp" alt="Image">
+            </picture>
+            <h3>Small title</h3>
+        </article>
+    </div>
+</section>
 
 
 </body>
